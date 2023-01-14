@@ -1,0 +1,10 @@
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/markbates/cleo v0.0.0-20221111052813-2111c0542982 h1:PH271pdrff1L1ZIrm3Hihn43SpC24KQOTkcTJsM1xgI=
+github.com/markbates/cleo v0.0.0-20221111052813-2111c0542982/go.mod h1:l8PCS7aWuBI1dWZzb+cLdsfL6QrWyWr41PuELxqgPWI=
+github.com/markbates/iox v0.0.0-20221020165654-699382563dae h1:roYZOV/yXR7MfIDUf9mHoDYssqP1G+B+HMFL6GZM/qA=
+github.com/markbates/iox v0.0.0-20221020165654-699382563dae/go.mod h1:q+P6BLqC21cbcmL82OdIO3A9VFCjq9fRQ+ije7T85ow=
+github.com/markbates/plugins v0.0.0-20221111052550-17c0f5661590 h1:hQygVai9V0ue6tQatVrlHPxhikHXr5p//8FMXBGI5jY=
+github.com/markbates/plugins v0.0.0-20221111052550-17c0f5661590/go.mod h1:sW8lOXIwFRLa6PHo1sgWlVohCtYt1v+ZtgVPKM6fsVQ=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PKk=
+gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
