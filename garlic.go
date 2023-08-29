@@ -41,7 +41,17 @@ func (g *Garlic) Main(ctx context.Context, pwd string, args []string) error {
 		return fmt.Errorf("command is nil")
 	}
 
-	return g.Cmd.Main(ctx, pwd, args)
+	cmd := g.Cmd
+
+	if sfs, ok := cmd.(SettableFS); ok {
+		sfs.SetFS(g.FS)
+	}
+
+	if sio, ok := cmd.(SettableIO); ok {
+		sio.SetIO(g.IO)
+	}
+
+	return cmd.Main(ctx, pwd, args)
 }
 
 func (g Garlic) PluginName() string {
