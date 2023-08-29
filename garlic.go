@@ -11,7 +11,6 @@ import (
 
 type Garlic struct {
 	Cmd  Commander
-	Exit int
 	FS   fs.FS
 	IO   iox.IO
 	Name string
