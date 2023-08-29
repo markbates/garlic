@@ -7,11 +7,10 @@ import (
 
 	"github.com/markbates/iox"
 	"github.com/markbates/plugins"
-	"github.com/markbates/plugins/plugcmd"
 )
 
 type Garlic struct {
-	Cmd  plugcmd.Commander
+	Cmd  Commander
 	Exit int
 	FS   fs.FS
 	IO   iox.IO
