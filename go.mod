@@ -3,9 +3,9 @@ module github.com/markbates/garlic
 go 1.19
 
 require (
-	github.com/markbates/iox v0.0.0-20221020165654-699382563dae
-	github.com/markbates/plugins v0.0.0-20221111052550-17c0f5661590
-	github.com/stretchr/testify v1.8.1
+	github.com/markbates/iox v1.0.0
+	github.com/markbates/plugins v1.1.0
+	github.com/stretchr/testify v1.9.0
 )
 
 require (

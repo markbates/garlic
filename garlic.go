@@ -4,16 +4,21 @@ import (
 	"context"
 	"fmt"
 	"io/fs"
+	"sync"
 
 	"github.com/markbates/iox"
-	"github.com/markbates/plugins"
+	"github.com/markbates/plugins/plugcmd"
 )
+
+var _ plugcmd.Commander = &Garlic{}
 
 type Garlic struct {
 	Cmd  Commander
 	FS   fs.FS
 	IO   iox.IO
 	Name string
+
+	mu sync.RWMutex
 }
 
 func (g *Garlic) Main(ctx context.Context, pwd string, args []string) error {
@@ -24,6 +29,9 @@ func (g *Garlic) Main(ctx context.Context, pwd string, args []string) error {
 	if len(g.Name) == 0 {
 		return fmt.Errorf("command name is required")
 	}
+
+	g.mu.RLock()
+	defer g.mu.RUnlock()
 
 	local := Local{
 		FS:   g.FS,
@@ -53,6 +61,6 @@ func (g *Garlic) Main(ctx context.Context, pwd string, args []string) error {
 	return cmd.Main(ctx, pwd, args)
 }
 
-func (g Garlic) PluginName() string {
-	return plugins.Name(g)
+func (g *Garlic) PluginName() string {
+	return fmt.Sprintf("%T", g)
 }

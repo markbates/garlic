@@ -7,14 +7,13 @@ import (
 	"testing"
 
 	"github.com/markbates/iox"
-	"github.com/markbates/plugins"
 	"github.com/stretchr/testify/require"
 )
 
 type commander func(ctx context.Context, pwd string, args []string) error
 
 func (c commander) PluginName() string {
-	return plugins.Name(c)
+	return "commander"
 }
 
 func (c commander) Main(ctx context.Context, pwd string, args []string) error {
